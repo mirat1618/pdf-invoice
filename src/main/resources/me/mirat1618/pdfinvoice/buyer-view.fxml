@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="me.mirat1618.pdfinvoice.BuyerController"
+          alignment="TOP_LEFT" hgap="10" vgap="10">
+
+    <padding><Insets top="10" right="10" left="10" bottom="10"/></padding>
+
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Наименование: "/>
+    <TextField fx:id="titleTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Внутренний номер: "/>
+    <TextField fx:id="internalNumberTextField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Адрес: "/>
+    <TextField fx:id="addressTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="3" GridPane.columnIndex="0" text="ИНН: "/>
+    <TextField fx:id="taxIdTextField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="4" GridPane.columnIndex="0" text="Грузополучатель и его адрес: "/>
+    <TextArea fx:id="shipperAddressTextArea" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+</GridPane>
+

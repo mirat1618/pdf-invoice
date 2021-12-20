@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="me.mirat1618.pdfinvoice.SellerController"
+          alignment="TOP_LEFT" hgap="10" vgap="10">
+
+    <padding><Insets top="10" right="10" left="10" bottom="10"/></padding>
+
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Наименование: "/>
+    <TextField fx:id="titleTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Адрес: "/>
+    <TextArea fx:id="addressTextArea" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="ИНН: "/>
+    <TextField fx:id="taxIdTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="3" GridPane.columnIndex="0" text="Расчетный счет: "/>
+    <TextField fx:id="billingAccountTextField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="4" GridPane.columnIndex="0" text="Кор. счет: "/>
+    <TextField fx:id="correspondentBillAccountTextField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="5" GridPane.columnIndex="0" text="БИК: "/>
+    <TextField fx:id="bankingIdTextField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="6" GridPane.columnIndex="0" text="Руководитель предприятия: "/>
+    <TextField fx:id="factoryManagerTextField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="7" GridPane.columnIndex="0" text="Гл. бухгалтер: "/>
+    <TextField fx:id="chiefAccountantTextField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Button GridPane.rowIndex="8" GridPane.columnIndex="0" text="Сохранить данные поля" onAction="#updateDefaultSeller"/>
+</GridPane>
+

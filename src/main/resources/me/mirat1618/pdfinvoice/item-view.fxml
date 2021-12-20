@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="me.mirat1618.pdfinvoice.ItemController" alignment="TOP_LEFT" hgap="10" vgap="10">
+
+    <padding><Insets top="10" right="10" left="10" bottom="10"/></padding>
+
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Наименование товара: "/>
+    <TextField fx:id="titleTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Ед. измерения: "/>
+    <TextField fx:id="measurementUnitTextField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Количество: "/>
+    <TextField fx:id="quantityTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"  onKeyReleased="#countSumsFields"/>
+
+    <Label GridPane.rowIndex="3" GridPane.columnIndex="0" text="Цена за единицу измерения: "/>
+    <TextField fx:id="pricePerUnitTextField" GridPane.rowIndex="3" GridPane.columnIndex="1"  onKeyReleased="#countSumsFields"/>
+
+    <Label GridPane.rowIndex="4" GridPane.columnIndex="0" text="Стоимость товаров всего без налога: "/>
+    <TextField fx:id="totalTaxFreeTextField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="5" GridPane.columnIndex="0" text="Налоговая ставка: "/>
+    <TextField fx:id="taxRateTextField" GridPane.rowIndex="5" GridPane.columnIndex="1" onKeyReleased="#countSumsFields"/>
+    <Label GridPane.rowIndex="5" GridPane.columnIndex="2" text="\%"/>
+
+    <Label GridPane.rowIndex="6" GridPane.columnIndex="0" text="Сумма налога: "/>
+    <TextField fx:id="taxSumTextField" GridPane.rowIndex="6" GridPane.columnIndex="1" onKeyReleased="#countSumsFields"/>
+
+    <Label GridPane.rowIndex="7" GridPane.columnIndex="0" text="Стоимость товаров всего, с учетом налога: "/>
+    <TextField fx:id="totalTextField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="8" GridPane.columnIndex="0" text="Страна происхождения: "/>
+    <TextField fx:id="originCountryTextField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="9" GridPane.columnIndex="0" text="Примечание: "/>
+    <TextArea fx:id="noteTextArea" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+</GridPane>
+

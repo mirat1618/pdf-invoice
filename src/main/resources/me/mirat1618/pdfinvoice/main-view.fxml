@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="me.mirat1618.pdfinvoice.MainController"
+          hgap="10" vgap="10">
+<!--          gridLinesVisible="true"> -->
+
+    <GridPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE"  onMouseClicked="#tabPaneClick" prefWidth="900">
+            <tabs>
+                <Tab text="Счёт" fx:id="invoiceTab"/>
+                <Tab text="Покупатель" fx:id="buyerTab"/>
+                <Tab text="Продавец" fx:id="sellerTab"/>
+                <Tab text="Объект" fx:id="itemTab"/>
+            </tabs>
+        </TabPane>
+    </GridPane>
+
+    <GridPane fx:id="invoiceGridPane" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <fx:include fx:id="invoice" source="invoice-view.fxml"/>
+    </GridPane>
+
+    <GridPane fx:id="buyerGridPane" GridPane.columnIndex="0" GridPane.rowIndex="1" visible="false">
+        <fx:include fx:id="buyer" source="buyer-view.fxml"/>
+    </GridPane>
+
+    <GridPane fx:id="sellerGridPane" GridPane.columnIndex="0" GridPane.rowIndex="1" visible="false">
+        <fx:include fx:id="seller" source="seller-view.fxml"/>
+    </GridPane>
+
+    <GridPane fx:id="itemGridPane" GridPane.columnIndex="0" GridPane.rowIndex="1" visible="false">
+        <fx:include fx:id="item" source="item-view.fxml"/>
+    </GridPane>
+
+    <Button GridPane.columnIndex="0" GridPane.rowIndex="2"  GridPane.halignment="RIGHT" onAction="#generatePDF" text="Сгенерировать PDF"/>
+</GridPane>

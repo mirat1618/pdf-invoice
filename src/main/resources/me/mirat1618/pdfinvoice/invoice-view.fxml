@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="me.mirat1618.pdfinvoice.InvoiceController"
+          alignment="TOP_LEFT"
+          hgap="10" vgap="10" >
+
+    <padding><Insets top="10" right="10" left="10" bottom="10"/></padding>
+
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Номер: "/>
+    <TextField fx:id="numberTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label  GridPane.rowIndex="1" GridPane.columnIndex="0" text="От: "/>
+    <DatePicker fx:id="datedByDatePicker" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Платежно-расчетный документ №: "/>
+    <TextField fx:id="documentNumberTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label GridPane.rowIndex="2" GridPane.columnIndex="2" text=" от: "/>
+    <DatePicker fx:id="documentDatedByDatePicker" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+</GridPane>
