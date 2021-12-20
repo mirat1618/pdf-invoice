@@ -21,7 +21,7 @@ import org.apache.commons.io.IOUtils;
 
 
 public class PdfGenerator {
-    public static BaseFont baseFont;
+    public static BaseFont baseFont = null;
 
     /*
      iText 5 createFont() method can't read files from resources directory of an executable .jar file.
@@ -41,13 +41,14 @@ public class PdfGenerator {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            // Get the font from a current directory
+        }
+        // Get the font from a current directory
+        if (baseFont == null) {
             try {
                 baseFont = BaseFont.createFont(fontFile.getPath(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-            } catch(DocumentException e) {
+            } catch (DocumentException e) {
                 e.printStackTrace();
-            } catch(IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
